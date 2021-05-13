@@ -1,0 +1,20 @@
+version: '3'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:6.1.1
+    ports:
+      - '32181:32181'
+    environment:
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+  kafka:
+    image: confluentinc/cp-kafka:6.1.1
+    depends_on:
+      - zookeeper
+    ports:
+      - '29092:29092'
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: localhost:32181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:29092
+      KAFKA_BROKER_ID: 2
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
