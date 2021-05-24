@@ -1,4 +1,13 @@
+# github.com/bitly/go-simplejson v0.5.0
+## explicit
+github.com/bitly/go-simplejson
 # github.com/confluentinc/confluent-kafka-go v1.7.0
 ## explicit
 github.com/confluentinc/confluent-kafka-go/kafka
 github.com/confluentinc/confluent-kafka-go/kafka/librdkafka_vendor
+# github.com/thedevsaddam/renderer v1.2.0
+## explicit
+github.com/thedevsaddam/renderer
+# gopkg.in/yaml.v2 v2.4.0
+## explicit
+gopkg.in/yaml.v2
